@@ -1,0 +1,73 @@
+baseurl = "/"
+languageCode = "en-us"
+theme = "hello-friend-ng"
+
+[author]
+  name = "Anton James Lee"
+
+[params]
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "02-01-2006"
+  dateformNumTime = "02-01-2006 15:04 -0700"
+
+  # Set disableReadOtherPosts to true in order to hide the links to other posts.
+  disableReadOtherPosts = false
+
+  # Metadata mostly used in document's head
+  description = "My new digital resume and blog"
+  keywords = "homepage, blog, resume"
+  images = [""]
+
+  customCSS = ["/css/styles.css"]
+
+  homeSubtitle="Student, Programmer, Designer, 'Smart Creative' type, Nerd, etc"
+
+  # Directory name of your blog content (default is `content/posts`)
+  contentTypeName = "posts"
+
+  # Default theme "light" or "dark"
+  defaultTheme = "dark"
+  [[params.social]]
+    name = "twitter"
+    url  = "https://twitter.com/tachyonic_clock"
+  [[params.social]]
+    name = "github"
+    url  = "https://github.com/tachyonicClock"
+  [[params.social]]
+    name = "linkedin"
+    url  = "https://www.linkedin.com/in/anton-lee-0666471a5"
+  [[params.social]]
+    name = "email"
+    url  = "mailto:anton.j.15.le@gmail.com"
+
+
+[languages]
+  [languages.en]
+    title = "Anton James Lee"
+    subtitle = "Student, Computer Scientist, Designer, 'Smart Creative' type, Nerd, etc"
+    keywords = ""
+    copyright = "All rights reserved"
+    readOtherPosts = "Read other posts"
+
+    [languages.en.params.logo]
+      logoText = "Anton James Lee"
+      logoHomeLink = "/"
+      path = "/img/nGwEbV.png"
+    # or
+    #
+    # alt = "Your example logo alt text"
+
+  # And you can even create generic menu
+  [[menu.main]]
+    identifier = "blog"
+    name       = "Blog"
+    url        = "/posts"
+  [[menu.main]]
+    identifier = "projects"
+    name       = "Projects"
+    url        = "/projects"
+  [[menu.main]]
+    identifier = "about"
+    name       = "About"
+    url        = "/about"
