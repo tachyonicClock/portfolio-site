@@ -1,11 +1,11 @@
 ---
-title: "Personal Projects"
+title: "Projects"
 date: 2020-03-22T16:17:46+13:00
 draft: false
 ---
 
 ### 2020
-* TODO ...
+**Wait and see!**
 
 ### 2019
 **[NCEA Level 3 - Technology Scholarship - "*Theasthai*" (Complex Website)](theasthai)**<br>
@@ -17,4 +17,6 @@ A simple stealth game where you try to escape some monsters. Completely custom a
 
 ### 2017
 [**NCEA Level 1 - "*MAD*" (C# Strategy Game)**](mad) <br>
-One of my very first projects. Made in C# leveraging the amazing (thats sarcasm) power of windows forms for a strategic strategy game. 
+One of my very first projects. Made in C# leveraging the amazing (thats sarcasm) power of windows forms for a strategic strategy game.
+
+---
