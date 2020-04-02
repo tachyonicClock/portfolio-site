@@ -18,7 +18,7 @@ img {
 </style>
 
 > Please keep it in mind that this document was aimed at NCEA technology markers.
-> As such, it uses alot of design terminology and is a bit shy when it comes to 
+> As such, it uses a lot of design terminology and is a bit shy when it comes to 
 > technical jargon. It's also excessively long.
 
 > **TL;DR I make a website to let people make events and order tickets to those events**

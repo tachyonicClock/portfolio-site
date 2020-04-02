@@ -4,9 +4,9 @@ date: 2020-03-31T15:33:14+13:00
 draft: false
 ---
 
-Programs on your computer have a secret way of talking to each other. They knows to pause music when I get a call. My spreadsheet talks to my word processor. Chrome know to open my native save file dialog. How are my programs talking to each other and why was I not invited?
+Programs on your computer have a secret way of talking to each other called the D-Bus. They know to pause music when you get a call. Your spreadsheet talks to your word processor. Chrome knows how to open your native save file dialog. How are our programs talking to each other and why were you not invited?
 
-Your programs talk to each other through the D-Bus. The D-Bus is this magical forum where applications yell at each other to do things or simply yell about what they are doing. It like slack for programs.
+The D-Bus is this mystic forum where applications yell at each other to do things or simply yell about what they are doing. It like slack for programs.
 
 <img class="invertible" src="/posts/DBUS/UygXnF.webp"></img>
 
@@ -17,24 +17,25 @@ The D-Bus is this central place where all programs talk to each other at once. E
 
 ---
 ## Snooping
-So what does the D-Bus look like? Lets take a look at it with the D-Bus monitor.
+So what does the D-Bus look like? Let us take a look at it with the D-Bus monitor.
 ```
 dbus-monitor # Prints out what is happening on the dbus to the terminal
 ```
-When dbus-monitor is running you will note that things happen now and then. If you want it to do something extra try hitting a media key or clicking on another program. Messages will be sent as the result of both of these. It won't take long for your terminal to fill up. Below is what happens when I hit the skip button when listening to music on Spotify. (I spam it a bit so don't be too scared by it)
+When `dbus-monitor` is running you will note that things happen now and then. If you want it to do something extra try hitting a media key or clicking on another program. Messages will be sent as the result of both of these. It won't take long for your terminal to fill up. Below is what happens when I hit the skip button when listening to music on Spotify. (I spam it a bit so don't be too scared by it)
 <div class="video-card-small">
 <video class="invertible" autoplay loop src="/posts/DBUS/kivcLa.mp4" controls></video>
 </div>
 
-The D-Bus is a message based system where messages tell processes to do stuff. What we see is a representation of those messages. Its very different from other IPC like HTTP(Inter Process Communication) which is simply a byte stream. The D-Bus is more of a type of RPC (Remote Procedural Calls) than classical IPC.
+The D-Bus is a message based system where messages tell processes to do stuff. What we see is a representation of those messages. It's very different from other IPC like HTTP(Inter-Process Communication) which are simply byte streams. The D-Bus is more of a type of RPC (Remote Procedural Calls) than classical IPC.
 
-In the world of D-Bus it is very useful to think of a **process** as an **object**. Every process connected to the D-Bus has methods and properties. For instance "Spotify" is a process with a number of **methods**: pause, play, skip etc. Any other process (more or less as some security considerations are made) can send a message to request these methods and get a response back! (Just like in OOP) You can think of this like sending a text to a friend, you can send them a description of what you want done (arguments) and get back a response.
+In fact, in the world of D-Bus it is very useful to think of a **process** as an **object**. Every process connected to the D-Bus has methods and properties. For instance "Spotify" is a process with a number of **methods**: pause, play, skip, etc. Any other process (more or less as some security considerations are made) can send a message to request these methods and get a response back! (Just like in OOP) You can think of this like sending a text to a friend, you can send them a description of what you want done (arguments) and get back a response.
 
 Secondly processes can *"subscribe"* to another process. This is how processes can be kept up to date with changes. When an object *publishes* a message it is sent to all of the parties that have subscribed. This is called a signal and it is like being on a mailing list.
 
 #### Reading Messages
 
-Here is the fist message that the D-Bus receives. This is a signal from the gnome shell (`:1.42`) telling all subscribers *"hey everyone someone pressed the skip song button"*. `:1.XX` is the sender/destination, processes are addressed with a unique name (like an IP). The most important processes also have specific names (like a domain name). Sadly dbus-monitor does not show these names that are much more descriptive. 
+Here is the fist message that the D-Bus receives. This is a signal from the gnome-shell (`:1.42`) telling all subscribers *"hey everyone someone pressed the skip song button"*. `:1.XX` is the sender/destination, processes are addressed with a unique name (like an IP). The most important processes also have specific names (like a domain name). Sadly `dbus-monitor` does not always show these names. 
+
 ```
 signal time=1585631887.955732 sender=:1.42 -> destination=:1.78 serial=7862 path=/org/gnome/Shell; interface=org.gnome.Shell; member=AcceleratorActivated
    uint32 322
@@ -64,7 +65,7 @@ method call time=1585631887.956302 sender=:1.78 -> destination=:1.761 serial=242
 method return time=1585631887.956799 sender=:1.761 -> destination=:1.78 serial=1193 reply_serial=242
 ```
 
-To recap. On the D-Bus processes are objects, with properties and methods. Also on the D-Bus are signals that other processes can subscribe to. When the media key is pressed the gnome shell sends out a signal to its subscribers -- *"Hey everyone, someone pressed a key"*. One of its subscribers is responsible for interpreting that signal. In this case, it tells Spotify to skip a song using a method call -- *"Hey spotify, skip a song"*. I encourage you to spend some time working out what is happening on your d-bus! For something I only recently discovered existed it sure does a bunch.
+To recap. On the D-Bus, processes are objects, with properties and methods. Also on the D-Bus are signals that other processes can subscribe to. When the media key is pressed the gnome-shell sends out a signal to its subscribers -- *"Hey everyone, someone pressed a key"*. One of its subscribers is responsible for interpreting that signal. In this case, it tells Spotify to skip a song using a method call -- *"Hey Spotify, skip a song"*. I encourage you to spend some time working out what is happening on your d-bus! For something I only recently discovered existed it sure does a bunch.
 
 (Most of the other output in the video is Spotify telling gnome to bring up a notification. It sends an image using a byte array and updates its own properties)
 
@@ -145,7 +146,7 @@ gdbus call --session \
    --method org.mpris.MediaPlayer2.Player.PlayPause
 ```
 
-You may have noticed something. Both spotify and VLC media player use the same interface and path. This is all part of standardization and makes is what helps make the D-Bus useful. It would be impossible to do anything if every media player had to be interacted with in a different way.
+You may have noticed something. Both Spotify and VLC media players use the same interface and path. This is all part of standardization and makes is what helps make the D-Bus useful. It would be impossible to do anything if every media player had to be interacted with in a different way.
 
 [If you want here is the specification](https://specifications.freedesktop.org/mpris-spec/latest/)
 
@@ -177,3 +178,9 @@ gdbus call --session \
 I strongly recommend D-Feet as a program to go pocking around the D-Bus with. It has a good GUI and everything just works.
 
 <img class="invertible" src="/posts/DBUS/RpEBKC.webp"></img>
+
+### Further Reading
+* [Wikipedia](https://en.wikipedia.org/wiki/D-Bus)
+* [D-Bus Specification](https://dbus.freedesktop.org/doc/dbus-specification.html)
+* [freedesktop.org](https://www.freedesktop.org/wiki/Software/dbus/)
+* [Media Player Remote Interfacing Specification](https://specifications.freedesktop.org/mpris-spec/2.2/)
