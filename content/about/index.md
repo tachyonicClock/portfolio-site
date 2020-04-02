@@ -10,7 +10,7 @@ draft: false
 
 Self taught (working on my formal education at the moment) programmer with real world experience. I’m the sort of person that codes for fun and as work. I aspire to contribute positively to truly important and valuable projects. I'm hardworking, good at communication, and well organized. I always strive to learn new things and challenge myself to be better and better.
 
-Some of  my experience and knowledge includes: Jenkins CI/CD, Kubernetes, Docker,  Golang, C++, C#, Golang, Python, Bash, Linux, React, Node JS and Blockchain
+Some of  my experience and knowledge includes: Jenkins CI/CD, Kubernetes, Docker,  Golang, C++, C#, Python, Bash, Linux, React, Node JS and Blockchain
 
 
 ### Job History 

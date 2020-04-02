@@ -1,4 +1,4 @@
-baseurl = "/"
+baseurl = "https://antonjameslee.com/"
 languageCode = "en-us"
 theme = "hello-friend-ng"
 
@@ -37,9 +37,6 @@ theme = "hello-friend-ng"
   [[params.social]]
     name = "linkedin"
     url  = "https://www.linkedin.com/in/anton-lee-0666471a5"
-  [[params.social]]
-    name = "email"
-    url  = "mailto:anton.j.15.le@gmail.com"
 
 
 [languages]

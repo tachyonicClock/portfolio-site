@@ -1,7 +1,7 @@
 ---
 title: "The D-BUS or the secret social network for programs"
 date: 2020-03-31T15:33:14+13:00
-draft: true
+draft: false
 ---
 
 Programs on your computer have a secret way of talking to each other. They knows to pause music when I get a call. My spreadsheet talks to my word processor. Chrome know to open my native save file dialog. How are my programs talking to each other and why was I not invited?
