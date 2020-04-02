@@ -1,7 +1,7 @@
 ---
 title: "Mad"
 date: 2017-01-01T14:14:38+13:00
-draft: true
+draft: false
 ---
 
 Mad was one of my earliest large projects. It was coded in C# using windows forms which led to interesting challenges to get the graphics I wanted. All of the graphics were created by me. I used illustrator for the Icons, Photoshop for the map and Blender for the rockets and explosions.
