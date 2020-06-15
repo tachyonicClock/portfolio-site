@@ -1,6 +1,6 @@
 baseurl = "https://antonjameslee.com/"
 languageCode = "en-us"
-theme = "hello-friend-ng"
+theme = "minimalist"
 
 [author]
   name = "Anton James Lee"
@@ -21,34 +21,23 @@ theme = "hello-friend-ng"
 
   customCSS = ["/css/styles.css"]
 
-  homeSubtitle="Student, Programmer, Designer, 'Smart Creative' type, Nerd, etc"
+  homeSubtitle="Programmer"
 
   # Directory name of your blog content (default is `content/posts`)
   contentTypeName = "posts"
 
   # Default theme "light" or "dark"
-  defaultTheme = "dark"
-  [[params.social]]
-    name = "twitter"
-    url  = "https://twitter.com/tachyonic_clock"
-  [[params.social]]
-    name = "github"
-    url  = "https://github.com/tachyonicClock"
-  [[params.social]]
-    name = "linkedin"
-    url  = "https://www.linkedin.com/in/anton-lee-0666471a5"
-
 
 [languages]
   [languages.en]
-    title = "Anton James Lee"
-    subtitle = "Student, Computer Scientist, Designer, 'Smart Creative' type, Nerd, etc"
+    title = "Anton Lee"
+    subtitle = "Programmer"
     keywords = ""
     copyright = "All rights reserved"
     readOtherPosts = "Read other posts"
 
     [languages.en.params.logo]
-      logoText = "Anton James Lee"
+      logoText = "Anton Lee"
       logoHomeLink = "/"
       path = "/img/nGwEbV.png"
     # or
@@ -57,14 +46,40 @@ theme = "hello-friend-ng"
 
   # And you can even create generic menu
   [[menu.main]]
-    identifier = "blog"
-    name       = "Blog"
-    url        = "/posts"
-  [[menu.main]]
-    identifier = "projects"
-    name       = "Projects"
-    url        = "/projects"
+    identifier = "home"
+    name       = "Home"
+    url        = "/"
+    weight     = 1
+
   [[menu.main]]
     identifier = "about"
     name       = "About"
-    url        = "/about"
+    url        = "/about/"
+    weight     = 2
+
+  [[menu.main]]
+    identifier = "Posts"
+    name       = "Posts"
+    url        = "/posts/"
+    weight     = 3
+
+  [[menu.main]]
+    identifier = "projects"
+    name       = "Projects"
+    url        = "/projects/"
+    weight     = 4
+
+
+
+  [[menu.main]]
+    identifier = "linkedin"
+    name       = "Linkedin"
+    url        = "https://www.linkedin.com/in/anton-lee-0666471a5"
+    weight     = 5
+
+  [[menu.main]]
+    identifier = "github"
+    name       = "Github"
+    url        = "https://github.com/tachyonicClock"
+    weight     = 6
+

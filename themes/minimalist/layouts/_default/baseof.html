@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    {{- partial "head.html" . -}}
+    <body>
+        <div id="main">
+        {{- partial "header.html" . -}}
+        
+        {{ if len .Site.Menus }}
+        {{ partial "side-bar.html" . }}
+        {{end}}
+        
+        <div id="content" class="content">
+        {{- block "main" . }}{{- end }}
+        </div>
+        
+
+        {{- partial "footer.html" . -}}
+        </div>
+    </body>
+</html>

@@ -1,0 +1,12 @@
+{{ define "main" }}
+<main aria-role="main" class="Home">
+  <div class="Splash">
+    <div>
+    <h1>{{ .Site.Title }}</h1>
+    {{- with .Site.Params.homeSubtitle }}
+    <h4>{{.}}</h4>
+    {{- end }}
+    </div>
+  </div>
+</main>
+{{ end }}

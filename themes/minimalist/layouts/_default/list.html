@@ -1,0 +1,32 @@
+{{ define "main" }}
+<main class="posts">
+  <div>
+    <!-- {{- if .Content }}
+    <div class="content">{{ .Content }}</div>
+    {{- end }} -->
+
+    {{- range .Data.Pages.GroupByDate "2006" }}
+    <div class="posts-group">
+      <div class="post-year">{{ .Key }}</div>
+
+      <div class="posts-list">
+        {{- range .Pages }}
+        <div class="post-item">
+          <a href="{{.Permalink}}">
+            <span class="post-title">{{.Title}}</span>
+            <span class="post-day">
+              {{ if .Site.Params.dateformShort }}
+              {{ .Date.Format .Site.Params.dateformShort }}
+              {{ else }}
+              {{ .Date.Format "Jan 2"}}
+              {{ end }}
+            </span>
+          </a>
+        </div>
+        {{- end }}
+      </div>
+    </div>
+    {{- end }}
+  </div>
+</main>
+{{ end }}
