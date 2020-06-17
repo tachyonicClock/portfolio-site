@@ -11,9 +11,8 @@
 
       <div class="posts-list">
         {{- range .Pages }}
-        <div class="post-item">
+        <div class="post-item bounce-swipe">
           <a href="{{.Permalink}}">
-            <span class="post-title">{{.Title}}</span>
             <span class="post-day">
               {{ if .Site.Params.dateformShort }}
               {{ .Date.Format .Site.Params.dateformShort }}
@@ -21,6 +20,7 @@
               {{ .Date.Format "Jan 2"}}
               {{ end }}
             </span>
+            <span class="post-title">{{.Title}}</span>
           </a>
         </div>
         {{- end }}

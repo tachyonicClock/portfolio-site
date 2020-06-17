@@ -2,6 +2,11 @@ html {
   font-family: 'Open Sans', sans-serif;
 }
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .Home h1 {
   font-style: normal;
   font-weight: normal;
@@ -40,13 +45,14 @@ div.Splash {
   height: calc(100vh - 16px);
 }
 
+
 .post-year {
   font-family: Open Sans;
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
   line-height: 49px;
-  display: flex;
+  text-align: center;
   align-items: center;
   letter-spacing: 1.38em;
   padding: 10px;
@@ -54,7 +60,6 @@ div.Splash {
 .posts-list li {
   list-style-type: none;
   font-size: 18px;
-  text-align: center;
 }
 .post-item a {
   color: inherit;
@@ -64,7 +69,8 @@ div.Splash {
   Side navigation bar
 */
 
-#content {
+.content {
+  animation: 0.250s ease-out 0s 1 mainSlideIn;
   height: 100%;
   width: 90vw;
 
@@ -73,11 +79,8 @@ div.Splash {
   overflow-y: scroll;
   left: 10vw;
 }
-.content {
-  animation: 0.5s ease-out 0s 1 mainSlideIn;
-}
 .isExiting .content {
-  animation: 0.5s ease-out 0s 1 mainSlideOut;
+  animation: 0.250s ease-out 0s 1 mainSlideOut;
 }
 
 .Sidenav {
@@ -105,23 +108,50 @@ div.Splash {
   color: inherit;
   text-decoration: inherit;
   font-size: 24px;
+  padding: 10px;
+}
+
+.bounce-swipe {
+  position: relative;
+  display: inline-block;
+  background: none;
+  /* transition:color 0.25s ease; */
+}
+
+.bounce-swipe:hover {
+  color:white;
+}
+
+.bounce-swipe::after {
+  position: absolute;
+  content: '';
+  top:0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: black;
+  transform-origin:left;
+  transition: width 0.5s cubic-bezier(0.155, 1.650, 0.660, 0.435);
+  z-index:-1;
+}
+
+.bounce-swipe:hover::after {
+  width: 100%;
+}
+.bounce-swipe:active::after {
+  width: 0%;
 }
 
 .Sidenav .active {
   font-weight: bold;
   color: #6C7A7D;
-  animation: 0.5s ease-out 0s 1 leftSlideIn;
-}
-
-
-.isExiting .Sidenav .active {
-  /* background-color: red; */
-  animation: 0.5s ease-out 0s 1 rightSlideOut;
+  /* animation: 0.5s ease-out 0s 1 leftSlideIn; */
 }
 
 /* 
   Animation
 */
+
 
 
 @keyframes mainSlideIn {
@@ -148,7 +178,7 @@ div.Splash {
 
 @keyframes leftSlideIn {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(-2vw);
     opacity: 0;
   }
   100% {
@@ -162,7 +192,7 @@ div.Splash {
     opacity: 1;
   }
   100% {
-    transform: translateX(100%);
+    transform: translateX(2vw);
     opacity: 0;
 
   }

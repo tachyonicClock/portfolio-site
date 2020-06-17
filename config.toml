@@ -83,3 +83,5 @@ theme = "minimalist"
     url        = "https://github.com/tachyonicClock"
     weight     = 6
 
+[markup.goldmark.renderer]
+  unsafe= true

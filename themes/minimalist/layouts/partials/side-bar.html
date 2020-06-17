@@ -3,7 +3,7 @@
   {{- $currentPage := . -}}
   {{ range .Site.Menus.main -}}
     <li class="{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}active{{ end }}">
-      <a href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+      <a class="bounce-swipe" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
     </li>
   {{- end }}
   </div>
