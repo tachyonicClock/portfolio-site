@@ -36,7 +36,7 @@
 
                 <div class="pagination__buttons">
                     {{ if .NextInSection }}
-                        <span class="button previous">
+                        <span class="button previous bounce-swipe">
                             <a href="{{ .NextInSection.Permalink }}">
                                 <span class="button__icon">←</span>
                                 <span class="button__text">{{ .NextInSection.Title }}</span>
@@ -45,7 +45,7 @@
                     {{ end }}
 
                     {{ if .PrevInSection }}
-                        <span class="button next">
+                        <span class="button next bounce-swipe">
                             <a href="{{ .PrevInSection.Permalink }}">
                                 <span class="button__text">{{ .PrevInSection.Title }}</span>
                                 <span class="button__icon">→</span>

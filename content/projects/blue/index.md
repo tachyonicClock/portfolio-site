@@ -9,6 +9,7 @@ Blue was a game me and a friend made for NCEA Level 2 programming. The game was 
 <div class="videoCard">
 <video src="demo.mp4" controls></video>
 </div> 
+
 ![Basic Diagram of the AI](h3Y9Nt.png)
 *The "dementor's" artificial intelligence was quite crude. It simply switched 
 between modes if conditions were met.*

@@ -5,14 +5,14 @@ draft: false
 ---
 
 <style>
-figcaption {
+figcaption{
     text-align: center;
     padding: 5px;
     font-size: 10px;
     color: grey;
     font-style: oblique;
 }
-img {
+img{
     cursor: pointer;
 }
 </style>
@@ -29,16 +29,17 @@ img {
 
 
 <hr/>
-1. [Introduction] (#Introduction)
-2. [Problem Definition] (#Problem Definition)
-3. [Brief] (#Brief)
-4. [Design and Planning] (#Design and Planning)
-5. [Developing An Outcome] (#Developing An Outcome)
-6. [Testing] (#Testing) 
-7. [Conclusion] (#Conclusion)  
+
+1. [Introduction](#Introduction)
+2. [Problem Definition](#ProblemDefinition)
+3. [Brief](#Brief)
+4. [Design and Planning](#DesignAndPlanning)
+5. [Developing An Outcome](#DevelopingAnOutcome)
+6. [Testing](#Testing) 
+7. [Conclusion](#Conclusion)  
 
 
-## Introduction {#Introduction}
+## Introduction{#Introduction}
 
 > “All the world’s a stage, And all the men and women merely players; They have their exits and their entrances, And one man in his time plays many parts.” ~William Shakespeare
 
@@ -46,7 +47,7 @@ The word theatre comes from the Greek “theasthai”, meaning behold. The theat
 
 In this project, I created a website to address the needs of the drama department at my school and other event organisers in the community. The website is *flexible* enough for event organisers to create tickets to a broad range of events. Event-goers can then browse and purchase tickets online.
 
-## Problem Definition {#Problem Definition}
+## Problem Definition{#ProblemDefinition}
 
 ### Inception
 
@@ -110,7 +111,7 @@ Morgana explains that the types of events they run are broad. This stressed the 
 
 The interview highlighted that the tool required *flexibility*. By looking at the wider context early on it meant that I could refine the specification before a single line of code was written. Through interviewing these two stakeholders I was given a clear idea of what possible clients needed. Consequently, I could plan my project embracing a broad range of possible events.
 
-## Brief {#Brief}
+## Brief{#Brief}
 
 ### Conceptual Statement
 
@@ -209,7 +210,7 @@ I came up with some "nice to have" ideas that I would want to implement given ti
 
 After coming up with the above specifications I emailed them to Ms Binks to get her feedback on them. I was given the simple response, ”Looks good to me Anton”. It was good to have Ms Binks Seal of approval before I moved on, but more discussion could have been beneficial.
 
-## Design and Planning {#Design and Planning}
+## Design and Planning{#DesignAndPlanning}
 
 ### Time Management
 
@@ -350,7 +351,7 @@ I then used a program called Figma[^6] to create a mock layout for my website. I
 
 ![My mock-up showing how I planned the style and functionality of the user interface](img/uw9Chi.webp)
 
-## Developing An Outcome {#Developing An Outcome}
+## Developing An Outcome{#DevelopingAnOutcome}
 
 With most of the planning out of the way I started development. I knew that since I had not done this sort of project before a lot would change from my plans. I ran into many, many, many issues most of which will not be mentioned here. Hopefully this gives a good idea of how I went about development and overcame technical issues. Some of the issues I ran into persist because I ran out of time to fix them. Despite that I am very proud of my outcome and think it turned out well.
 
@@ -549,7 +550,7 @@ Cocker-compose is another tool which lets you define how the dockers talk to eac
 
 ![Docker. Left, shows the configuration of the services. Right, shows the configuration being run](img/IeCe5A.webp)
 
-## Testing {#Testing}
+## Testing{#Testing}
 
 Throughout development, I have been constantly testing. I would make a change then check that it worked. This is good but not ideal. The website handles payments so it is vital that it is reliable. If the website were to error it could result in users losing money or the whole site coming down and data being lost, in the worst case. Another aspect that makes testing difficulty is the complexity and range of edge cases and rules. Every parameter of every form would need a range of tests conducted. Does it work with a number, whitespace, brackets, 0, infinity, -1, strings, etc. The errors would then need to be caught and reported before they snowball into larger issues. Furthermore security is also a consideration: free tickets?,  replace events?, data leaks?, etc. Finally, as a website it should handle multiple users doing stuff all at the same time? It requires good testing while also being surprisingly complex to test.
 
@@ -597,7 +598,7 @@ My tester found the cart overlay to be very annoying. In the below screenshot yo
 
 Another bug my tester found is whenever the ticket number was set to zero the ticket would disappear from the cart. It meant that when a user “backspaced” the specified ticket number to enter a new number the ticket would disappear and would have to be re-added. The reason for this bug is the way the cart uses its data structure. When a ticket is added it’s event is added to an array. The specific ticket that the user wants to purchase has a special field added that represents the desired number of tickets. If that field is zero or undefined the ticket is not displayed. It follows that when the user changes the number to zero or to empty it hides the ticket. To resolve this bug I would require a way to specify that the ticket is currently zero or undefined but will be defined. 
 
-### Conclusion {#Conclusion}
+### Conclusion{#Conclusion}
 
 **VIDEO DEMO**
 
@@ -675,14 +676,14 @@ The website I created is not fully complete, however, it is functional. In the f
 
 <script>
   var images = document.getElementsByTagName("img")
-for (let i = 0; i < images.length; i++) {
+for (let i = 0; i < images.length; i++){
   const image = images[i];
   var newImage = image.cloneNode(true)
   var div = document.createElement("div")
   var figure = document.createElement("figure")
   var caption = document.createElement("figcaption")
   caption.innerHTML = newImage.alt
-  if (newImage.getAttribute("align")) {
+  if (newImage.getAttribute("align")){
     newImage.removeAttribute("align")
   }
   newImage.addEventListener("click",function(e){

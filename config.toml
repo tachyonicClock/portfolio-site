@@ -19,8 +19,6 @@ theme = "minimalist"
   keywords = "homepage, blog, resume"
   images = [""]
 
-  customCSS = ["/css/styles.css"]
-
   homeSubtitle="Programmer"
 
   # Directory name of your blog content (default is `content/posts`)
@@ -34,7 +32,7 @@ theme = "minimalist"
     subtitle = "Programmer"
     keywords = ""
     copyright = "All rights reserved"
-    readOtherPosts = "Read other posts"
+    readOtherPosts = "Read Other Posts"
 
     [languages.en.params.logo]
       logoText = "Anton Lee"

@@ -4,9 +4,7 @@ date: 2020-03-23T12:52:44+13:00
 draft: false
 ---
 
-<img width="25%" style="float: left; padding: 10px;" src="/img/TB6SzW.webp"/>
-
-## Anton James Lee
+## Anton Lee
 
 *Currently studding* **computer science** *and* **data analytics** *at the university of Waikato*
 

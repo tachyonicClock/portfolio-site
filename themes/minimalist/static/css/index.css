@@ -35,9 +35,7 @@ div.Splash {
   justify-content: center;
 }
 
-/* 
 
-*/
 .posts {
   display: flex;
   align-items: center;
@@ -64,6 +62,14 @@ div.Splash {
 .post-item a {
   color: inherit;
   text-decoration: inherit;
+}
+
+.pagination__buttons a {
+  padding: 10px;
+  color: inherit;
+  text-decoration: inherit;
+  font-size: 20px;
+  padding: 10px;
 }
 /* 
   Side navigation bar
