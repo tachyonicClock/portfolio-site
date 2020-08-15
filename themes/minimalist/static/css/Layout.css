@@ -7,25 +7,22 @@
     grid-area: content;
 }
 
-.lyt-header {
-    grid-area: header;
-}
-
 .lyt-footer {
+    max-height: 5em;
     grid-area: footer;
 }
 
 /* MOBILE - layout for mobile and small screens */
 .lyt-layout {
+    min-height: 100%;
     display: grid;
     grid-template-columns: 5vw  90vw  5vw;
-    grid-template-areas: "... header ..."
-                        "... sidebar ..."
+    grid-template-areas: "... sidebar ..."
                         "... content ..."
                         "... footer ...";
 }
 /* DESKTOP - layout for desktop and large screens */
-@media only screen and (min-width: 700px) {
+@media (min-device-width: 700px), (device-width: 700px) {
     .lyt-sidebar {
         width: 10em;
         height: 100%;
@@ -38,9 +35,9 @@
         display: grid;
         grid-gap: 0.5vw;
         grid-template-columns: 14em 5vw 60vw ;
-        grid-template-areas: "sidebar ... header  ...."
+        grid-template-areas: "sidebar ... ....... ...."
                              "sidebar ... content ...."
-                             "....... ... footer  ....";
+                             "sidebar ... footer  ....";
     }
 }
   

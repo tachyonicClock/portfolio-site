@@ -24,10 +24,10 @@
 
 div.Splash {
   width: 100%;
-  height: calc(100vh - 16px);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 2em;
 }
 
 .post-item a {
