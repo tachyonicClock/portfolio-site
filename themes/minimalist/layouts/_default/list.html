@@ -7,11 +7,11 @@
 
     {{- range .Data.Pages.GroupByDate "2006" }}
     <div class="posts-group">
-      <div class="post-year">{{ .Key }}</div>
+      <h3>{{ .Key }}</h3>
 
-      <div class="posts-list">
+      <div>
         {{- range .Pages }}
-        <div class="post-item bounce-swipe">
+          <h5 class="post-item bounce-swipe">
           <a href="{{.Permalink}}">
             <span class="post-day">
               {{ if .Site.Params.dateformShort }}
@@ -22,7 +22,7 @@
             </span>
             <span class="post-title">{{.Title}}</span>
           </a>
-        </div>
+          </h5>
         {{- end }}
       </div>
     </div>

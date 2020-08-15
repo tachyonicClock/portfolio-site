@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html>
-    {{- partial "head.html" . -}}
-    <body>
-        <div id="main">
-        {{- partial "header.html" . -}}
-        
-        {{ if len .Site.Menus }}
-        {{ partial "side-bar.html" . }}
-        {{end}}
-        
-        <div id="content" class="content">
-        {{- block "main" . }}{{- end }}
+{{- partial "head.html" . -}}
+<body>
+    <div class="lyt-layout">
+        <div class="lyt-header">
+            {{- partial "header.html" . -}}
         </div>
-        
-
-        {{- partial "footer.html" . -}}
+        <div class="lyt-sidebar">
+            {{ if len .Site.Menus }}
+            {{ partial "side-bar.html" . }}
+            {{end}}
         </div>
-    </body>
+        <div class="lyt-content">
+            {{- block "main" . }}{{- end }}
+        </div>
+        <footer class="lyt-footer">
+            {{- partial "footer.html" . -}}
+        </footer>
+    </div>
+</body>
 </html>
