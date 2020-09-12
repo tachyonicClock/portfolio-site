@@ -95,7 +95,7 @@ body {
 }
 
 html {
-  font-size: 14px
+  font-size: 30px;
 }
 
 img, video{
@@ -217,7 +217,7 @@ a {
   background-repeat: no-repeat;
   background-size: 100% 1px;
   background-position: 0 100%;
-  transition: all 0.2s ease-in-out
+  transition: color 0.2s ease-in-out
 }
 
 a:hover {

@@ -3,14 +3,12 @@
 {{- partial "head.html" . -}}
 <body>
     <div class="lyt-layout">
-        <div class="lyt-header">
-            {{- partial "header.html" . -}}
-        </div>
         <div class="lyt-sidebar">
             {{ if len .Site.Menus }}
             {{ partial "side-bar.html" . }}
             {{end}}
         </div>
+        
         <div class="lyt-content">
             {{- block "main" . }}{{- end }}
         </div>
