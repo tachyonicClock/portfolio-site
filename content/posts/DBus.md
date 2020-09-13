@@ -8,11 +8,11 @@ Programs on your computer have a secret way of talking to each other called the 
 
 The D-Bus is this mystic forum where applications yell at each other to do things or simply yell about what they are doing. It like slack for programs.
 
-<img class="invertible" src="/posts/DBUS/UygXnF.webp"></img>
+<img class="img-small" src="/posts/DBUS/UygXnF.webp"></img>
 
 The D-Bus is this central place where all programs talk to each other at once. Each user has there own **session bus** and has access to the **system bus**. But other than that it is a free for all with many processes talking to each other, its a loud and confusing place. The main thing to get across is it is not like the web where its just a client and a server, but rather a tangle of programs talking to each other at the same time.
 
-<img class="invertible" src="/posts/DBUS/HXJkXt.webp"></img>
+<img class="img-small" src="/posts/DBUS/HXJkXt.webp"></img>
 
 
 ---
@@ -23,7 +23,7 @@ dbus-monitor # Prints out what is happening on the dbus to the terminal
 ```
 When `dbus-monitor` is running you will note that things happen now and then. If you want it to do something extra try hitting a media key or clicking on another program. Messages will be sent as the result of both of these. It won't take long for your terminal to fill up. Below is what happens when I hit the skip button when listening to music on Spotify. (I spam it a bit so don't be too scared by it)
 <div class="video-card-small">
-<video class="invertible" autoplay loop src="/posts/DBUS/kivcLa.mp4" controls></video>
+<video class="invertible" autoplay loop src="https://github.com/tachyonicClock/portfolio-site/raw/master/static/posts/DBUS/kivcLa.mp4" controls></video>
 </div>
 
 The D-Bus is a message based system where messages tell processes to do stuff. What we see is a representation of those messages. It's very different from other IPC like HTTP(Inter-Process Communication) which are simply byte streams. The D-Bus is more of a type of RPC (Remote Procedural Calls) than classical IPC.
@@ -177,7 +177,7 @@ gdbus call --session \
 ### Go Explore
 I strongly recommend D-Feet as a program to go pocking around the D-Bus with. It has a good GUI and everything just works.
 
-<img class="invertible" src="/posts/DBUS/RpEBKC.webp"></img>
+<img class="img-small" src="/posts/DBUS/RpEBKC.webp"></img>
 
 ### Further Reading
 * [Wikipedia](https://en.wikipedia.org/wiki/D-Bus)

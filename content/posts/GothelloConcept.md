@@ -10,13 +10,13 @@ If you would like to play it, it is available at https://gothello.xyz
 
 ## Go
 
-![The game of go](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/FloorGoban.JPG/1024px-FloorGoban.JPG)
+<img class="img-small" alt="The game of go" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/FloorGoban.JPG/1024px-FloorGoban.JPG">
 
 For those that do not know the game of Go is one of the earliest board games invented over 2,500 years ago in China. It is thought to be the oldest game continuously played to the present day. It is a longer game about gradually capturing territory while trying to stop the other player from doing the same. The game is played in turns with each player playing one stone, or piece of there colour. The pieces join into a group when they are placed next to each other. When a group is surrounded by the opponents' stones, it is captured, removing them from play. The winner is determined by the player who controls the most territory and has captured the most pieces.
 
 ## Othello
 
-![Othello](https://upload.wikimedia.org/wikipedia/commons/2/20/Othello-Standard-Board.jpg)
+<img class="img-small" alt="Othello" src="https://upload.wikimedia.org/wikipedia/commons/2/20/Othello-Standard-Board.jpg">
 
 Othello is much simpler. It is again played in turns where each player places a piece of there colour on a grid. The stones must be placed so that two of your colour are sandwiching a line of the opponents pieces. The line of pieces is then flipped so that they are all your colour. In this manner, the game is played until no more pieces may be played on the board. Othello is a much more dynamic game where it is often unclear who is winning and fortunes can change quickly.
 
@@ -76,11 +76,10 @@ Sometimes it is interesting to think about what the worst idea could be, this le
 
 In the end, we decided upon a simple concept: we would divide the board into sections. This idea involved subdividing the whole 8x8 board into 4 4x4 sub-boards. In each of these sub-boards, a different rule set would apply.
 
-![Gothello Board](/posts/Gothello/vVnWkC.webp)
-
+<img class="img-medium" alt="Gothello Board" src="/posts/Gothello/vVnWkC.webp">
 
 This was an intriguing idea because of how the borders between sub-boards would interact. A Go move could have a game-changing effect on the Othello board and vice-versa. For example, a Go move could flip a line in an Othello game or an Othello move could help capture some Go stones.
 
 Later as we developed the game concept, we would discover what we came to call conduction. Conduction is when a Go-style move is played in the Go section but is conducted into the Othello sections. Or vice-versa, where the Othello board could remove the liberties of a Go shape. One of the fascinating aspects of this project was that lots of these ideas and interactions arose organically rather than being explicitly planned. These mechanics result in some fascinating games that you won't really appreciate unless you play the game. 
 
-![Gothello Conduction](/posts/Gothello/1L0I26L.webp)
+<img class="img-medium" alt="Gothello Conduction" src="/posts/Gothello/1L0I26L.webp">

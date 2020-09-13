@@ -24,7 +24,7 @@ img{
 > **TL;DR I make a website to let people make events and order tickets to those events**
 
 <div class="videoCard">
-<video src="vid/demo.mp4" controls autoplay></video>
+<video src="https://github.com/tachyonicClock/portfolio-site/raw/master/content/projects/theasthai/vid/demo.mp4" controls autoplay>
 </div>
 
 
@@ -603,7 +603,7 @@ Another bug my tester found is whenever the ticket number was set to zero the ti
 **VIDEO DEMO**
 
 <div style="padding: 10px">
-<video style="width: 100%" src="vid/demo.mp4" controls autoplay/>
+<video style="width: 100%" src="https://github.com/tachyonicClock/portfolio-site/raw/master/content/projects/theasthai/vid/demo.mp4" controls autoplay>
 </div>
 
 ![Me and Ms Binks looking at the website](img/iu8Oop.webp)

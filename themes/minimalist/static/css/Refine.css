@@ -63,12 +63,6 @@ https://github.com/heisenburger/typora-theme-refine
   box-sizing: border-box
 }
 
-*:focus {
-  background-color: var(--blue-bright);
-  box-shadow: 0 0 0 var(--unit) var(--blue-bright);
-  outline: none
-}
-
 body,
 h1,
 h2,
@@ -92,10 +86,6 @@ figure {
 html,
 body {
   height: 100%
-}
-
-html {
-  font-size: 30px;
 }
 
 img, video{
