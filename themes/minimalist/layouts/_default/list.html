@@ -1,32 +1,33 @@
 {{ define "main" }}
 <main class="posts">
   <div>
-    <!-- {{- if .Content }}
+    {{- if .Content }}
     <div class="content">{{ .Content }}</div>
-    {{- end }} -->
+    {{else}}
+      {{- range .Data.Pages.GroupByDate "2006" }}
+      <div class="posts-group">
+        <h3>{{ .Key }}</h3>
 
-    {{- range .Data.Pages.GroupByDate "2006" }}
-    <div class="posts-group">
-      <h3>{{ .Key }}</h3>
-
-      <div>
-        {{- range .Pages }}
-          <h5 class="post-item bounce-swipe">
-          <a href="{{.Permalink}}">
-            <span class="post-day">
-              {{ if .Site.Params.dateformShort }}
-              {{ .Date.Format .Site.Params.dateformShort }}
-              {{ else }}
-              {{ .Date.Format "Jan 2"}}
-              {{ end }}
-            </span>
-            <span class="post-title">{{.Title}}</span>
-          </a>
-          </h5>
-        {{- end }}
+        <div>
+          {{- range .Pages }}
+            <h5 class="post-item bounce-swipe">
+            <a href="{{.Permalink}}">
+              <span class="post-day">
+                {{ if .Site.Params.dateformShort }}
+                {{ .Date.Format .Site.Params.dateformShort }}
+                {{ else }}
+                {{ .Date.Format "Jan 2"}}
+                {{ end }}
+              </span>
+              <span class="post-title">{{.Title}}</span>
+            </a>
+            </h5>
+          {{- end }}
+        </div>
       </div>
-    </div>
+      {{- end }}
     {{- end }}
+
   </div>
 </main>
 {{ end }}
