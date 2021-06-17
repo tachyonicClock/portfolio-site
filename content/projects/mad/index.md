@@ -20,5 +20,5 @@ function SkipToExplosions(){
 </script>
 
 <div class="videoCard">
-<video id="demo" src="demo.mp4" controls></video>
+<video id="demo" src="https://github.com/tachyonicClock/portfolio-site/raw/master/content/projects/mad/demo.mp4" controls></video>
 </div>
