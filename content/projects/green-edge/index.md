@@ -9,5 +9,5 @@ draft: false
 **[Open Poster](poster.png)**
 
 <div class="videoCard">
-<video src="demo.mp4" controls></video>
+<video src="https://github.com/tachyonicClock/portfolio-site/raw/master/content/projects/green-edge/demo.mp4" controls></video>
 </div> 
